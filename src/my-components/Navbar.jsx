@@ -1,23 +1,28 @@
-import { Box, Text, Center, Flex, Link, Button } from "@chakra-ui/react"
+import { Box, Text, Center, Flex, Link, Button, Image } from "@chakra-ui/react"
 import { COLORS } from "@/colors/colors";
 import { LuSearch, LuUser } from "react-icons/lu";
+import { MdOpacity } from "react-icons/md";
 
 function Navbar(){
     return (
     <>
         <Box bg={COLORS.WhitePrimary} w="100%" p="10" color={COLORS.GrayPrimary}>
             <Center>
-                <Flex gap = "10px">
-                    <Link href="" color={COLORS.GrayPrimary}> Quem somos?</Link>
-                    <Link href="" color={COLORS.GrayPrimary}> Dados</Link>
-                    <Link href="" color={COLORS.GrayPrimary}> Contato</Link>
-                    <Link href="" color={COLORS.GrayPrimary}> Perguntas Frequentes?</Link>
-                    <Button bg="white" color={COLORS.BluePrimary} rounded={"full"}>
+                <Flex gap = "10px"> 
+                    <Image height="50px" src="src\assets\logos\LOGO 1.png"/>
+                    <Box bg={COLORS.WhitePrimary} w="5px" color="red" borderLeft="1px solid gray"/>
+                    <Link href="" color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}} > Quem somos?</Link>
+                    <Link href="" color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}> Dados</Link>
+                    <Link href="" color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}> Contato</Link>
+                    <Link href="" color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}> Perguntas Frequentes</Link>
+                    <Flex margin = "5px">
+                    <Button className = "BotãoPesquisa" bg="white" color={COLORS.BluePrimary} rounded={"full"}_hover={{color: COLORS.OrangePrimary, opacity:0.8, boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}>
                         <LuSearch>  </LuSearch> Pesquisa
                     </Button>
-                    <Button bg={COLORS.BluePrimary} color={COLORS.WhitePrimary} rounded={"full"}>
+                    <Button bg={COLORS.BluePrimary} color={COLORS.WhitePrimary} rounded={"full"} _hover={{color: COLORS.OrangePrimary, opacity:0.8, boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}>
                         <LuUser>  </LuUser> LOGIN
                     </Button>
+                    </Flex>
                 </Flex>
             </Center>
         </Box>

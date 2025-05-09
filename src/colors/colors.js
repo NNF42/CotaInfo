@@ -4,3 +4,7 @@ export const COLORS = {
     OrangePrimary: "#ED400D",
     GrayPrimary: "#474747"
 }
+
+export const GRADIENTS = {
+    BlueGradient: "linear(to-r,#ED400D,#00AFEF )"
+}
