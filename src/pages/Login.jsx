@@ -4,49 +4,9 @@ import Navbar from "@/my-components/Navbar";
 import { COLORS, GRADIENTS } from "@/colors/colors";
 import { LuChartArea, LuDatabase, LuGitGraph, LuGraduationCap } from "react-icons/lu";
 
-function LandingPage(){
+function Login(){
     return (
     <>
-        <Navbar/> 
-        <Box position="relative" bgImage="url('/backgroundimages/BgBackground LandingPage1.png')" bgSize="cover" bgPosition="center" bgRepeat={"no-repeat"} w="100%" h= "736px" px="160px" py="100px" color="white">
-            <Box
-                    position="absolute"
-                    top="0"
-                    left="0"
-                    right="0"
-                    bottom="0"
-                    bg="rgba(0, 0, 0, 0.4)"
-                    zIndex="1" 
-                />
-                <Stack
-                    spacing={4} 
-                    position="absolute"
-                    zIndex="2">
-            <Text fontSize="40pt" fontWeight="bold" whiteSpace="pre-line">
-            COMPREENDA MELHOR A{"\n"}ATUAÇÃO DA LEI DE COTAS{"\n"}
-            NA{" "}
-            <Box as="span" color={COLORS.OrangePrimary}>
-              UFCG
-            </Box>
-          </Text>
-            <Box
-            bg="rgba(247, 247, 247, 0.4)"// corrigir cor
-            w="728px"
-            h="196px"
-            borderRadius="20px"
-            p="20px"
-          > 
-                <Flex align="center" gap={3}>
-                <LuChartArea size="100px" color={COLORS.BluePrimary}></LuChartArea> <Text color={COLORS.WhitePrimary}>O COTAINFO foi desenvolvido para que você possa compreender o ingresso, a permanência e os desafios enfrentados pelos estudantes cotistas e não cotistas na UFCG</Text>
-                </Flex>
-                <Flex aling="center" gap={3}>
-                <Button size="md"  bgColor={COLORS.BluePrimary} color={COLORS.WhitePrimary} fontSize="25px" rounded="full" _hover={{w:"210px", color: COLORS.WhitePrimary, opacity:0.9, boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}> FERRAMENTAS </Button>
-                <Button size="md"  bgColor={COLORS.BluePrimary} color={COLORS.WhitePrimary} fontSize="25px" rounded="full" _hover={{w:"120px", color: COLORS.WhitePrimary, opacity:0.9, boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}> LOGIN </Button>
-                </Flex>
-            </Box>
-      
-        </Stack>
-        </Box>
         <Box bgGradient="to-r"  gradientFrom={COLORS.BluePrimary} gradientTo="blue.200" w="100%" h="2540px"  px="160px" py="100px">
             <Stack gap={5}>
             <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="bold" color={COLORS.WhitePrimary}> 
@@ -132,4 +92,4 @@ function LandingPage(){
     )
 }
 
-export default LandingPage;
+export default Login;
