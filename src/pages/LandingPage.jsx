@@ -4,6 +4,7 @@ import Navbar from "@/my-components/Navbar";
 
 import { COLORS, GRADIENTS } from "@/colors/colors";
 import { LuChartArea, LuDatabase, LuGitGraph, LuGraduationCap } from "react-icons/lu";
+import Footer from "@/my-components/Footer";
 
 function LandingPage(){
     return (
@@ -180,7 +181,7 @@ function LandingPage(){
          position={"relative"} 
          bgColor={COLORS.WhitePrimary}
          w="100%" 
-         minH="2540px"  
+         minH="1540px"  
          px="160px" 
          py="100px"
          mt={-120}
@@ -215,6 +216,7 @@ function LandingPage(){
             </Flex>
             </Flex>
         </Box>
+        <Footer/>
     </>
     )
 }
