@@ -1,4 +1,5 @@
 import { Avatar, Box, Card, Text, Center, Flex, Icon, Link, Button, Image, Stack } from "@chakra-ui/react"
+import { motion } from "framer-motion";
 import Navbar from "@/my-components/Navbar";
 
 import { COLORS, GRADIENTS } from "@/colors/colors";
@@ -18,14 +19,15 @@ function LandingPage(){
                     bg="rgba(0, 0, 0, 0.4)"
                     zIndex="1" 
                 />
+                
                 <Stack
                     spacing={4} 
                     position="absolute"
                     zIndex="2">
-            <Text fontSize="40pt" fontWeight="bold" whiteSpace="pre-line">
+            <Text fontSize="40pt" fontWeight="extrabold" whiteSpace="pre-line">
             COMPREENDA MELHOR A{"\n"}ATUAÇÃO DA LEI DE COTAS{"\n"}
             NA{" "}
-            <Box as="span" color={COLORS.OrangePrimary}>
+            <Box as="span" color={COLORS.OrangePrimary} fontWeight={"extrabold"}>
               UFCG
             </Box>
           </Text>
@@ -47,11 +49,11 @@ function LandingPage(){
       
         </Stack>
         </Box>
-        <Box bgGradient="to-r"  gradientFrom={COLORS.BluePrimary} gradientTo="blue.200" w="100%" h="2540px"  px="160px" py="100px">
+        <Box position={"relative"} bgGradient="to-r"  gradientFrom={COLORS.BluePrimary} gradientTo={COLORS.LightBlue} w="100%" h="2540px"  px="160px" py="100px">
             <Stack gap={5}>
-            <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="bold" color={COLORS.WhitePrimary}> 
+            <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="extrabold" color={COLORS.WhitePrimary}> 
                   CONHEÇA NOSSAS {"\n"} 
-                  <Box as="span" color={COLORS.OrangePrimary}>FERRAMENTAS</Box>
+                  <Box as="span" fontWeight={"extrabold"} color={COLORS.OrangePrimary}>FERRAMENTAS</Box>
             </Text> 
             <Box bg={COLORS.WhitePrimary} w="622px" h="5px" color="red" borderBottom="1px solid gray"/>
             <Text whiteSpace="pre-line" fontSize="20pt" color={COLORS.WhitePrimary}> 
@@ -61,7 +63,7 @@ function LandingPage(){
             <Image borderRadius="20px" src ="public\backgroundimages\BG IMAGE 2 LANDING PAGE.png" /> 
             </Stack>
             <Stack gap={5}>
-            <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="bold" color={COLORS.WhitePrimary}> 
+            <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="extrabold" color={COLORS.WhitePrimary}> 
                   DESCUBRA DADOS {"\n"}
                   SOBRE ALUNOS
             </Text> 
@@ -117,7 +119,7 @@ function LandingPage(){
                 <Flex direction="column" align="flex-start" gap={5} >
                 <Icon as={LuDatabase} boxSize="50px" flexShrink={0}/>
                 <Text fontSize="31pt" whiteSpace="pre-line" fontWeight="bold" textAlign="left" lineHeight="45px"> DADOS SOBRE {"\n"} PERMANÊNCIAS </Text>
-                <Text fontSize="16pt" whiteSpace="pre-line" textAlign="left" lineHeight="25px" >
+                <Text fontSize="16pt" whiteSpace="pre-line" fontWeight={"normal"} textAlign="left" lineHeight="25px" >
                   Descubra os motivos de abandono,  {"\n"}
                   transferências e jubilamentos dos {"\n"}
                   alunos da UFCG. {"\n"}
@@ -127,7 +129,50 @@ function LandingPage(){
             </Flex>
             </Stack>
         </Box>
-       
+        
+
+
+        
+        
+         <Box // seção 3
+         position={"relative"} 
+         bgColor={COLORS.WhitePrimary}
+         w="100%" 
+         minH="2540px"  
+         px="160px" 
+         py="100px"
+         
+         >
+          
+            <Stack gap={5}>
+              <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="extrabold" color={COLORS.Gra}> 
+                    DESCUBRA AS CHANCES {"\n"} 
+                    <Box as="span" fontWeight={"extrabold"} color={COLORS.BluePrimary}>DE VOCÊ SE FORMAR</Box>
+              </Text> 
+              <Box bg={COLORS.BluePrimary} w="622px" h="5px" color="red" borderBottom="1px solid gray"/>
+                <Text whiteSpace="pre-line" fontSize="20pt" fontWeight={"normal"} color={COLORS.GrayPrimary}> 
+                  Com nossa ferramenta de probabilidade de conclusão, descubra suas chances de se formar na UFCG  {"\n"}
+                  e explore estratégias para aumentá-las!
+                </Text>
+              <Image borderRadius="20px" src ="public\backgroundimages\BG IMAGE 3 LANDING PAGE.png" /> 
+              </Stack>
+          <Flex mt={20} gap={490}>
+            <Flex alignItems={"flex-start"}>
+            <Image borderRadius="20px" zIndex={1} src ="public\suportimage\SUPPORT IMAGE 1.png" />
+            <Image borderRadius="20px" mt={60} ml={-20} position={"relative"} zIndex={0} src ="public\suportimage\SUPPORT IMAGE 2.png" /> 
+            </Flex>
+            <Text mt={40} whiteSpace={"pre-line"} fontSize={"61pt"} fontWeight={"extrabold"} textAlign={"right"}> 
+                CALCULE SUAS {"\n"} <Text as={"span" } fontSize={"61pt"} color={COLORS.OrangePrimary} fontWeight={"extrabold"} textAlign={"right"}> CHANCES DE  {"\n"} GRADUAÇÃO </Text>
+            </Text>
+          </Flex>  
+          <Text mt={"-140px"} whiteSpace={"pre-line"} fontSize={"20pt"} textAlign={"right"}> 
+                E saiba como aumentar suas chances
+          </Text>
+          <Flex mt={"20px"} justifyContent={"end"}>
+          <Button  bg={COLORS.OrangePrimary} color={COLORS.WhitePrimary} size={"2xl"} rounded={"full"}
+          _hover={{color: COLORS.BluePrimary, opacity:0.8, boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}> PROBABILIDADE DE SE FORMAR </Button>
+          </Flex>
+        </Box>
     </>
     )
 }
