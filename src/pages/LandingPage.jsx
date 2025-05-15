@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, Text, Center, Flex, Icon, Link, Button, Image, Stack } from "@chakra-ui/react"
+import { Avatar, Box, Card, Text, Center, Flex, Icon, Link, Button, Image, Stack, Textarea } from "@chakra-ui/react"
 import { motion } from "framer-motion";
 import Navbar from "@/my-components/Navbar";
 
@@ -172,6 +172,48 @@ function LandingPage(){
           <Button  bg={COLORS.OrangePrimary} color={COLORS.WhitePrimary} size={"2xl"} rounded={"full"}
           _hover={{color: COLORS.BluePrimary, opacity:0.8, boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}> PROBABILIDADE DE SE FORMAR </Button>
           </Flex>
+        </Box>
+
+
+
+         <Box // seção 4
+         position={"relative"} 
+         bgColor={COLORS.WhitePrimary}
+         w="100%" 
+         minH="2540px"  
+         px="160px" 
+         py="100px"
+         mt={-120}
+         
+         >
+            <Stack gap={5} align={"center"}>
+              <Text whiteSpace={"pre-line"} textAlign={"center"} fontSize={"61pt"} fontWeight={"extrabold"} color={COLORS.GrayPrimary}>
+                  NOSSO SISTEMA DE DADOS É DESENVOLVIDO PELO:
+              </Text>
+              <Flex gap={20}>
+              <a href="https://eureca.lsd.ufcg.edu.br/pages/home/home.html" target="blank">
+              
+                  <Image width={"250px"} aç src="src\assets\logos\EURECA LOGO.png"/>
+              </a>
+              <a href="https://www.facebook.com/ProjMemoriaUFCG/" target="blank">
+              
+                  <Image width={"250px"} aç src="src\assets\logos\MCT PROJETO LOGO.png"/>
+              </a>
+              </Flex>
+              </Stack>
+            <Flex>
+            <Flex mt={"250px"} direction={"column"}>
+              <Text whiteSpace={"pre-line"} textAlign={"left"} fontSize={"61pt"} fontWeight={"extrabold"} color={COLORS.GrayPrimary}>
+                  RESTA ALGUMA {"\n"} DÚVIDA?
+              </Text>
+              <Textarea width={"424px"} height={"250px"} fontFamily={"Exo 2"} placeholder="Fale conosco!"/>
+              <Button mt={30} w={"250px"} fontFamily={"Exo 2"} bg={COLORS.BluePrimary}> Enviar comentário </Button>
+            </Flex>
+            <Flex mt={"250px"} ml={"400px"} alignItems={"flex-start"}>
+            <Image borderRadius="20px" zIndex={1} src ="public\suportimage\SUPPORT IMAGE 3.png" />
+            <Image borderRadius="20px" mt={60} ml={-20} position={"relative"} zIndex={0} src ="public\suportimage\SUPPORT IMAGE 4.png" />
+            </Flex>
+            </Flex>
         </Box>
     </>
     )
