@@ -235,12 +235,11 @@ function LandingPage(){
               <Image borderRadius="20px" src ="public\backgroundimages\BG IMAGE 3 LANDING PAGE.png" boxShadow={"5px 6px 16px rgb(165, 231, 255, 0.2)"} /> 
               </Stack>
 
-          <Flex mt={20} gap={490}>
-              <Flex alignItems={"flex-start"}>
-                  <Image borderRadius="20px" zIndex={1} src ="public\suportimage\SUPPORT IMAGE 1.png" />
-                  <Image borderRadius="20px" mt={60} ml={-20} position={"relative"} zIndex={0} src ="public\suportimage\SUPPORT IMAGE 2.png" /> 
+          <Flex mt={20} gap={120}>
+              <Flex alignItems={"center"}>
+                  <Image borderRadius="20px" maxH={"600px"} zIndex={1} src ="public\suportimage\VECTOR DRAWN 2.png" />
               </Flex>
-              <Text lineHeight={"100px"} mt={40} whiteSpace={"pre-line"} fontSize={"61pt"} fontWeight={"extrabold"} textAlign={"right"}> 
+              <Text lineHeight={"100px"} ml={"295px"} mt={"90px"} whiteSpace={"pre-line"} fontSize={"61pt"} fontWeight={"extrabold"} textAlign={"right"}> 
                   CALCULE SUAS {"\n"} 
                   <Text as={"span" } fontSize={"61pt"} color={COLORS.OrangePrimary} fontWeight={"extrabold"} textAlign={"right"}> CHANCES DE  {"\n"} GRADUAÇÃO </Text>
               </Text>
@@ -273,7 +272,7 @@ function LandingPage(){
          minH="1540px"  
          px="160px" 
          py="100px"
-         mt={"-450px"}
+         mt={"-550px"}
          
          >
             <Stack gap={5} align={"center"}>
@@ -309,9 +308,8 @@ function LandingPage(){
                               boxShadow: "0 6px 16px rgba(0, 0, 0, 0.2)",
                               }}> Enviar comentário </Button>
             </Flex>
-                <Flex mt={"250px"} ml={"400px"} alignItems={"flex-start"}>
-                    <Image borderRadius="20px" zIndex={1} src ="public\suportimage\SUPPORT IMAGE 3.png" />
-                    <Image borderRadius="20px" mt={60} ml={-20} position={"relative"} zIndex={0} src ="public\suportimage\SUPPORT IMAGE 4.png" />
+                <Flex mt={"250px"} ml={"370px"} alignItems={"flex-start"}>
+                    <Image borderRadius="20px" maxH={"600px"} zIndex={1} src ="public\suportimage\VECTOR DRAWN 1.png" />
                 </Flex>
            </Flex>
         </Box>
