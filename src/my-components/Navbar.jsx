@@ -8,12 +8,15 @@ function Navbar(){
     <>
         <Box bg={COLORS.WhitePrimary} w="100%" p="10" color={COLORS.GrayPrimary}>
             <Center>
-                <Flex gap = "10px"> 
+                <Flex gap = "10px" align={"center"} position={"relative"}> 
                     <Image height="50px" src="src\assets\logos\LOGO 1.png"/>
-                    <Box bg={COLORS.WhitePrimary} w="5px" color="red" borderLeft="1px solid gray"/>
+                    <Box bg={COLORS.WhitePrimary} w="5px" h="50px" color="red" borderLeft="1px solid gray"/>
                     <Text alignSelf={"center"} color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}><a href="" > Quem somos?</a></Text>
+                    <Box w="2px" h="30px" borderLeft="1px solid gray" />
                     <Text alignSelf={"center"} color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}><a href="" > Dados</a></Text>
+                    <Box w="2px" h="30px" borderLeft="1px solid gray" />
                     <Text alignSelf={"center"} color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}><a href="" > Contato</a></Text>
+                    <Box w="2px" h="30px" borderLeft="1px solid gray" />
                     <Text alignSelf={"center"} color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}><a href="" > Perguntas Frequentes</a></Text>
                     <Flex margin = "5px">
                     <Button className = "BotãoPesquisa" bg="white" color={COLORS.BluePrimary} rounded={"full"}_hover={{color: COLORS.OrangePrimary, opacity:0.8, boxShadow:"0 4px 8px rgba(0, 0, 0, 0.2)"}}>

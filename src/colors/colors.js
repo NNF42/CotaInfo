@@ -3,7 +3,8 @@ export const COLORS = {
     BluePrimary: "#00AFEF",
     OrangePrimary: "#ED400D",
     GrayPrimary: "#474747",
-    LightBlue: "#A5E7FF"
+    LightBlue: "#A5E7FF",
+    DarkBlue: "#003A50"
 }
 
 export const GRADIENTS = {
