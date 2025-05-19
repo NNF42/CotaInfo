@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, Text, Center, Flex, Icon, Link, Button, Image, Stack } from "@chakra-ui/react"
+import { Avatar, Box, Card, Text, Center, Flex, Field, Input, Icon, Link, Button, Image, Stack } from "@chakra-ui/react"
 import Navbar from "@/my-components/Navbar";
 
 import { COLORS, GRADIENTS } from "@/colors/colors";
@@ -7,87 +7,43 @@ import { LuChartArea, LuDatabase, LuGitGraph, LuGraduationCap } from "react-icon
 function Login(){
     return (
     <>
-        <Box bgGradient="to-r"  gradientFrom={COLORS.BluePrimary} gradientTo="blue.200" w="100%" h="2540px"  px="160px" py="100px">
-            <Stack gap={5}>
-            <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="bold" color={COLORS.WhitePrimary}> 
-                  CONHEÇA NOSSAS {"\n"} 
-                  <Box as="span" color={COLORS.OrangePrimary}>FERRAMENTAS</Box>
-            </Text> 
-            <Box bg={COLORS.WhitePrimary} w="622px" h="5px" color="red" borderBottom="1px solid gray"/>
-            <Text whiteSpace="pre-line" fontSize="20pt" color={COLORS.WhitePrimary}> 
-              Explore as ferramentas do COTAINFO para realizar uma análise aprofundada dos dados {"\n"}
-              relacionados ao ingresso, à permanência e aos desafios enfrentados pelos estudantes na UFCG.
-            </Text>
-            <Image borderRadius="20px" src ="public\backgroundimages\BG IMAGE 2 LANDING PAGE.png" /> 
-            </Stack>
-            <Stack gap={5}>
-            <Text whiteSpace="pre-line" fontSize="61pt" fontWeight="bold" color={COLORS.WhitePrimary}> 
-                  DESCUBRA DADOS {"\n"}
-                  SOBRE ALUNOS
-            </Text> 
-            <Text whiteSpace="pre-line" fontSize="20pt" color={COLORS.WhitePrimary}> 
-                Descubra e compare dados entre alunos cotistas e {"\n"}
-                de ampla concorrência na UFCG
-            </Text>
-            <Flex gap={3}>
-                <Button
-                h="100px"  
-                bgColor={COLORS.OrangePrimary} 
-                color={COLORS.WhitePrimary} fontSize="25px"
-                rounded="4xl"
-                px="30px"
-                py="150px"
-                >
-                <Flex direction="column" align="flex-start" gap={5} >
-                <Icon as={LuDatabase} boxSize="50px" flexShrink={0}/>
-                <Text fontSize="31pt" whiteSpace="pre-line" fontWeight="bold" textAlign="left" lineHeight="45px"> DADOS DE {"\n"} INGRESSANTES </Text>
-                <Text fontSize="16pt" whiteSpace="pre-line" textAlign="left" lineHeight="25px" >
-                  Descubra dados sobre o ingresso de  {"\n"}
-                  alunos da UFCG e compare ao {"\n"}
-                  longo dos anos. {"\n"}
-                  </Text>
-                </Flex> 
-                </Button>
-                <Button
-                h="100px"  
-                bgColor={COLORS.OrangePrimary} 
-                color={COLORS.WhitePrimary} fontSize="25px"
-                rounded="4xl"
-                px="30px"
-                py="150px"
-                >
-                <Flex direction="column" align="flex-start" gap={3} >
-                <Icon as={LuGraduationCap} boxSize="80px" flexShrink={0}/>
-                <Text fontSize="31pt" whiteSpace="pre-line" fontWeight="bold" textAlign="left" lineHeight="45px"> DADOS DE {"\n"} GRADUADOS </Text>
-                <Text fontSize="16pt" whiteSpace="pre-line" textAlign="left" lineHeight="25px" >
-                  Descubra dados sobre nossos alunos  {"\n"}
-                  graduados e compare ao  {"\n"}
-                  longo dos anos. {"\n"}
-                  </Text>
-                </Flex> 
-                </Button>
-                <Button
-                h="100px"  
-                bgColor={COLORS.OrangePrimary} 
-                color={COLORS.WhitePrimary} fontSize="25px"
-                rounded="4xl"
-                px="30px"
-                py="150px"
-                >
-                <Flex direction="column" align="flex-start" gap={5} >
-                <Icon as={LuDatabase} boxSize="50px" flexShrink={0}/>
-                <Text fontSize="31pt" whiteSpace="pre-line" fontWeight="bold" textAlign="left" lineHeight="45px"> DADOS SOBRE {"\n"} PERMANÊNCIAS </Text>
-                <Text fontSize="16pt" whiteSpace="pre-line" textAlign="left" lineHeight="25px" >
-                  Descubra os motivos de abandono,  {"\n"}
-                  transferências e jubilamentos dos {"\n"}
-                  alunos da UFCG. {"\n"}
-                  </Text>
-                </Flex> 
-                </Button>
-            </Flex>
-            </Stack>
-        </Box>
-       
+        <Navbar/>
+        <Box 
+            bgGradient={"to-r"} 
+            gradientFrom={COLORS.BluePrimary} 
+            gradientTo={COLORS.LightBlue} 
+            minH="906px" 
+            display="flex" 
+            alignItems="center"
+            justifyContent="center" >
+                <Box bgColor={COLORS.WhitePrimary} minH="650px" w={"1100px"} rounded={"20px"} p={"1em"} >
+                  <Flex direction={"row"} align={"center"} gap={"6em"}>
+                        <Image src="public\suportimage\LOGIN SUPPORT IMAGE 3.png" />
+                        <Flex direction={"column"} align={"center"}>
+                            <Text color={"black"} fontWeight={"bolder"} fontSize={"25pt"} textAlign={"center"}>Bem Vindo, estudante! <br/> Insira seu Login do SIGAA</Text>
+                            <Text textAlign={"center"} >Utilizamos seu login do SCAO para <br/> oferecer um acesso mais facilitado <br/> a suas informações desejadas!</Text>
+                        <Card.Root border={"none"} bg={COLORS.WhitePrimary} minW="sm" alignItems={"center"}>
+                            <Card.Body>
+                                <Stack gap="4" w="full">
+                                    <Field.Root alignItems={"center"}>
+                                        <Field.Label fontFamily={"Exo 2"}>Usuário</Field.Label>
+                                        <Input />
+                                    </Field.Root >
+                                    <Field.Root alignItems={"center"}>
+                                        <Field.Label>Senha</Field.Label>
+                                        <Input />
+                                    </Field.Root>
+                                </Stack>
+                            </Card.Body>
+                          <Card.Footer justifyContent="flex-end">
+                              <Button bg={COLORS.OrangePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="outline">Cancelar</Button>
+                              <Button bg={COLORS.BluePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="so lid">Entrar</Button>
+                          </Card.Footer>
+                        </Card.Root>
+                        </Flex>
+                  </Flex> 
+                </Box>
+          </Box>
     </>
     )
 }

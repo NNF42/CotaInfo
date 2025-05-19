@@ -9,7 +9,7 @@ function Navbar(){
         <Box bg={COLORS.WhitePrimary} w="100%" p="10" color={COLORS.GrayPrimary}>
             <Center>
                 <Flex gap = "10px" align={"center"} position={"relative"}> 
-                    <Image height="50px" src="src\assets\logos\LOGO 1.png"/>
+                    <Link to="/landing-page"><Image height="50px" src="src\assets\logos\LOGO 1.png"/></Link>
                     <Box bg={COLORS.WhitePrimary} w="5px" h="50px" color="red" borderLeft="1px solid gray"/>
                     <Text alignSelf={"center"} color={COLORS.GrayPrimary} textDecoration="none" _hover={{color: COLORS.OrangePrimary, opacity:0.8}}><a href="" > Quem somos?</a></Text>
                     <Box w="2px" h="30px" borderLeft="1px solid gray" />
