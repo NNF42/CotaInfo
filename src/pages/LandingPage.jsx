@@ -239,12 +239,12 @@ function LandingPage(){
               <Flex alignItems={"center"}>
                   <Image borderRadius="20px" maxH={"600px"} zIndex={1} src ="public\suportimage\VECTOR DRAWN 2.png" />
               </Flex>
-              <Text lineHeight={"100px"} ml={"295px"} mt={"90px"} whiteSpace={"pre-line"} fontSize={"61pt"} fontWeight={"extrabold"} textAlign={"right"}> 
+              <Text lineHeight={"100px"} ml={"3.53em"} mt={"1em"} whiteSpace={"pre-line"} fontSize={"61pt"} fontWeight={"extrabold"} textAlign={"right"}> 
                   CALCULE SUAS {"\n"} 
                   <Text as={"span" } fontSize={"61pt"} color={COLORS.OrangePrimary} fontWeight={"extrabold"} textAlign={"right"}> CHANCES DE  {"\n"} GRADUAÇÃO </Text>
               </Text>
           </Flex>  
-          <Text mt={"-200px"} whiteSpace={"pre-line"} fontSize={"20pt"} textAlign={"right"}> 
+          <Text mt={"-7em"} whiteSpace={"pre-line"} fontSize={"20pt"} textAlign={"right"}> 
                 E saiba como aumentar suas chances
           </Text>
           <Flex mt={"20px"} justifyContent={"end"}>
