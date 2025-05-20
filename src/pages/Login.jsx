@@ -1,10 +1,30 @@
 import { Avatar, Box, Card, Text, Center, Flex, Field, Input, Icon, Link, Button, Image, Stack } from "@chakra-ui/react"
+import { PasswordInput } from "@/components/ui/password-input"
 import Navbar from "@/my-components/Navbar";
+import { useMutation,  QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
 
 import { COLORS, GRADIENTS } from "@/colors/colors";
 import { LuChartArea, LuDatabase, LuGitGraph, LuGraduationCap } from "react-icons/lu";
+import { useState } from "react";
+import { loginStudent } from "@/servirces/userService";
+import { data } from "react-router-dom";
 
 function Login(){
+    const [username,setusername] = useState ("")
+    const [password,setpassword] = useState ("")
+    
+    const loginStudentPassword = useMutation({
+        mutationKey: ["loginStudentPassword"],
+        mutationFn: loginStudent,
+        onSucess: (data) => {
+            console.log(data)
+        },
+        onError: (error) => {
+            console.log(error)
+        }
+    })
+
+
     return (
     <>
         <Navbar/>
@@ -27,17 +47,17 @@ function Login(){
                                 <Stack gap="4" w="full">
                                     <Field.Root alignItems={"center"}>
                                         <Field.Label fontFamily={"Exo 2"}>Usuário</Field.Label>
-                                        <Input />
+                                        <Input onChange={(e) => setusername(e.target.value)} value = {username} />
                                     </Field.Root >
                                     <Field.Root alignItems={"center"}>
                                         <Field.Label>Senha</Field.Label>
-                                        <Input />
+                                        <PasswordInput onChange={(e) => setpassword(e.target.value)} value = {password}  />
                                     </Field.Root>
                                 </Stack>
                             </Card.Body>
                           <Card.Footer justifyContent="flex-end">
                               <Button bg={COLORS.OrangePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="outline">Cancelar</Button>
-                              <Button bg={COLORS.BluePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="so lid">Entrar</Button>
+                              <Button onClick={() => loginStudentPassword.mutate({username: username, password: password})} bg={COLORS.BluePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="so lid">Entrar</Button>
                           </Card.Footer>
                         </Card.Root>
                         </Flex>
