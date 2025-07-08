@@ -8,8 +8,12 @@ import { LuChartArea, LuDatabase, LuGitGraph, LuGraduationCap } from "react-icon
 import { useState } from "react";
 import { loginStudent } from "@/servirces/userService";
 import { data } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login(){
+
+    const navigate = useNavigate();
+
     const [username,setusername] = useState ("")
     const [password,setpassword] = useState ("")
     
@@ -17,7 +21,7 @@ function Login(){
         mutationKey: ["loginStudentPassword"],
         mutationFn: loginStudent,
         onSucess: (data) => {
-            console.log(data)
+            
         },
         onError: (error) => {
             console.log(error)
@@ -57,7 +61,7 @@ function Login(){
                             </Card.Body>
                           <Card.Footer justifyContent="flex-end">
                               <Button bg={COLORS.OrangePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="outline">Cancelar</Button>
-                              <Button onClick={() => loginStudentPassword.mutate({username: username, password: password})} bg={COLORS.BluePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="so lid">Entrar</Button>
+                              <Button onClick={() => loginStudentPassword.mutate({username_digitado: username, password_digitado: password})} bg={COLORS.BluePrimary} color={COLORS.WhitePrimary} rounded={"10px"} variant="so lid">Entrar</Button>
                           </Card.Footer>
                         </Card.Root>
                         </Flex>

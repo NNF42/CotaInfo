@@ -1,6 +1,6 @@
 import axios  from "axios";
 
-const EURECA_AS = "https://eureca.sti.ufcg.edu.br/as-sig";              //"https://pre.ufcg.edu.br:8443/as_scao/as"; 
+const EURECA_AS =  "https://eureca.sti.ufcg.edu.br/as" // "https://eureca.sti.ufcg.edu.br/as-sig";              //"https://pre.ufcg.edu.br:8443/as_scao/as"; 
 const EURECA_DAS_SIG = "https://eureca.sti.ufcg.edu.br/das-sig/v1";
 
 // for Eureca Authentication Service
